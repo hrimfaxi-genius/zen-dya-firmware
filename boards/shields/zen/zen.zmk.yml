@@ -1,0 +1,13 @@
+file_format: "1"
+id: zen
+name: zen
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble
+siblings:
+  - zen_left
+  - zen_right

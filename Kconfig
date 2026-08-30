@@ -20,3 +20,130 @@ config ZMK_RUNTIME_INPUT_PROCESSOR_TEST
       instead of waiting on the real SYS_INIT delay. Not for production use.
 
 endif
+
+# ZEN pointing-device drivers.
+menuconfig PMW3610_ALT
+  bool "PMW3610 mouse optical sensor"
+  select SPI
+  depends on INPUT
+  depends on DT_HAS_PIXART_PMW3610_ALT_ENABLED
+
+if PMW3610_ALT
+
+config INPUT_PMW3610_INIT_PRIORITY
+    int "PMW3610 initialization priority"
+    default INPUT_INIT_PRIORITY
+
+config PMW3610_ALT_SWAP_XY
+  bool "Swap the X/Y axis of PMW3610 sensor"
+
+config PMW3610_ALT_INVERT_X
+  bool "Invert the X axis of PMW3610 sensor"
+
+config PMW3610_ALT_INVERT_Y
+  bool "Invert the Y axis of PMW3610 sensor"
+
+config PMW3610_ALT_INIT_POWER_UP_EXTRA_DELAY_MS
+  int "Extra power up init delay (ms)"
+  default 0
+
+config PMW3610_ALT_INIT_RETRY_DELAY_MS
+  int "PMW3610 init retry delay (ms)"
+  default 1000
+
+config PMW3610_ALT_INIT_RETRY_MAX_ATTEMPTS
+  int "PMW3610 init retry max attempts"
+  default 0
+
+config PMW3610_ALT_REPORT_INTERVAL_MIN
+  int "PMW3610 minimum report interval"
+  default 0
+
+config PMW3610_ALT_SMART_ALGORITHM
+  bool "Enable PMW3610 smart algorithm"
+  default y
+
+config PMW3610_ALT_RUN_DOWNSHIFT_TIME_MS
+  int "PMW3610 RUN mode downshift time"
+  default 128
+  range 13 3264
+
+config PMW3610_ALT_REST1_DOWNSHIFT_TIME_MS
+  int "PMW3610 REST1 downshift time"
+  default 5000
+
+config PMW3610_ALT_REST2_DOWNSHIFT_TIME_MS
+  int "PMW3610 REST2 downshift time"
+  default 17000
+
+config PMW3610_ALT_REST1_SAMPLE_TIME_MS
+  int "PMW3610 REST1 sample time"
+  default 40
+
+config PMW3610_ALT_REST2_SAMPLE_TIME_MS
+  int "PMW3610 REST2 sample time"
+  default 100
+
+config PMW3610_ALT_REST3_SAMPLE_TIME_MS
+  int "PMW3610 REST3 sample time"
+  default 500
+
+module = PMW3610_ALT
+module-str = PMW3610_ALT
+source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
+
+endif
+
+menuconfig IQS7211E
+  bool "IQS7211E capacitive touch sensor"
+  select I2C
+
+if IQS7211E
+
+config IQS7211E_TAP_EDGE_MARGIN_PERMILLE
+  int "Tap ignore edge margin (permille)"
+  range 0 450
+  default 80
+
+config IQS7211E_SCROLLER_HWHEEL_ZONE_MIN_PERMILLE
+  int "Horizontal scroll zone start (permille)"
+  range 0 1000
+  default 0
+
+config IQS7211E_SCROLLER_HWHEEL_ZONE_MAX_PERMILLE
+  int "Horizontal scroll zone end (permille)"
+  range 0 1000
+  default 150
+
+config IQS7211E_TWO_FINGER_SCROLL_DIVIDER
+  int "Two-finger scroll delta divider"
+  range 1 64
+  default 8
+
+config IQS7211E_TAP_SUPPRESS_DISTANCE
+  int "Tap suppress distance after scroll gesture"
+  range 1 512
+  default 24
+
+config IQS7211E_TWO_FINGER_SCROLL_JUMP_THRESHOLD
+  int "Two-finger scroll jump threshold"
+  range 1 2048
+  default 180
+
+config IQS7211E_SCROLLER_INERTIA
+  bool "Enable inertia scrolling in scroller mode"
+  default n
+
+config IQS7211E_SCROLLER_INERTIA_DECAY_PERMILLE
+  int "Inertia decay coefficient (permille)"
+  range 1 999
+  default 920
+  depends on IQS7211E_SCROLLER_INERTIA
+
+config IQS7211E_SCROLLER_INERTIA_STOP_THRESHOLD_Q8
+  int "Inertia stop threshold (Q8 wheel units per 10ms)"
+  range 1 4096
+  default 96
+  depends on IQS7211E_SCROLLER_INERTIA
+
+endif

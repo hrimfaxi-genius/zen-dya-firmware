@@ -1,4 +1,27 @@
-# ZMK Runtime Input Processor Module
+# ZEN DYA Firmware
+
+ZENのPMW3610トラックボール、PAW3222トラックボール、IQS7211Eトラックパッドを
+DYA（Runtime Input Processor）から実行時調整できるファームウェアです。
+
+右手中央側のStudio RPCから、次のプロセッサーを設定できます。
+
+- `pointer`: 右手ポインター（速度、回転、反転、自動レイヤー）
+- `scroll`: 右手スクロール（速度、回転、反転、軸スナップ）
+- `leftptr`: 左手ポインター（速度、回転、反転、自動レイヤー）
+- `leftscr`: 左手スクロール（速度、回転、反転、軸スナップ）
+
+元のZENファームウェアが行っていたセンサー固有の向き補正とスクロール倍率は維持され、
+DYAの倍率はその後段に適用されます。このため初期値の `1/1` では従来と同じ操作感になり、
+ブラウザーUIから変更した値はフラッシュへ保存できます。
+
+GitHub Actionsの **Build ZMK firmware** を実行すると、ルートの `build.yaml` に従って
+ZEN用UF2が生成されます。通常構成は
+`zen_right_trackball_pmw3610_central.uf2` と `zen_left_peripheral.uf2` です。
+
+## DYA module
+
+このリポジトリには、ZENファームウェア設定と併せて以下のRuntime Input Processor
+モジュール本体およびWeb UIも含まれています。
 
 This ZMK module provides runtime configurable input processors for pointing devices. You can adjust scaling and rotation parameters dynamically through a web interface without rebuilding firmware.
 

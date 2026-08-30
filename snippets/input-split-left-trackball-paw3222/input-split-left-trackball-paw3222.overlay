@@ -1,0 +1,12 @@
+/{
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        left_trackball_paw3222_split: left_trackball_paw3222_split@11 {
+            compatible = "zmk,input-split";
+            reg = <11>;
+            device = <&pointing_device>;
+        };
+    };
+};

@@ -1,0 +1,68 @@
+# Copyright 2025 sekigon-gonnoc
+# SPDX-License-Identifier: GPL-2.0 or later
+
+description: IQS7211E capacitive touch sensor
+
+compatible: "azoteq,iqs7211e"
+
+include: i2c-device.yaml
+
+properties:
+  irq-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO connected to the motion pin, active low.
+
+  power-gpios:
+    type: phandle-array
+    required: false
+    description: |
+      GPIO connected to the power control pin.
+
+  init-symbol:
+    type: string
+    required: false
+    default: "iqs7211e_init_default"
+    description: |
+      C identifier (symbol) name of a `const uint8_t` array defined in the
+      board/project code which contains the initialization records for this
+      instance. The driver will reference this symbol as the init data for
+      the instance.
+
+      Example value: "trackpad0_iqs7211e_init"  (do NOT quote as a C string
+      in the YAML; the value is the identifier itself).
+      Provide `init-length` (integer) with the byte length of the array.
+      If `init-symbol` is not set for a node, the driver uses the module's
+      default symbol `iqs7211e_init_default` defined in the driver.
+
+  init-length:
+    type: int
+    required: false
+    default: 217
+    description: |
+      Length in bytes of the `init-symbol` array. Required when `init-symbol`
+      is provided.
+
+  scroller-mode:
+    type: boolean
+    required: false
+    description: |
+      When present, finger movement is reported as `INPUT_REL_WHEEL`
+      instead of pointer X/Y movement. Tap-to-click behavior remains active.
+
+  v-invert:
+    type: boolean
+    required: false
+    description: |
+      In scroller mode, invert vertical wheel direction.
+      When present, upward/downward finger movement direction is swapped
+      for `INPUT_REL_WHEEL` reports.
+
+  h-invert:
+    type: boolean
+    required: false
+    description: |
+      In scroller mode, invert horizontal wheel direction.
+      When present, left/right finger movement direction is swapped
+      for `INPUT_REL_HWHEEL` reports.

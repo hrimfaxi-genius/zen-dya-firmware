@@ -28,7 +28,7 @@ import {
 // Custom subsystem identifier - must match firmware registration
 export const SUBSYSTEM_IDENTIFIER = "cormoran_rip";
 
-export const GITHUB_REPO = "cormoran/zmk-module-runtime-input-processor";
+export const GITHUB_REPO = "hrimfaxi-genius/zen-dya-firmware";
 
 // Always credits the original template project this module was built from,
 // regardless of GITHUB_REPO above.

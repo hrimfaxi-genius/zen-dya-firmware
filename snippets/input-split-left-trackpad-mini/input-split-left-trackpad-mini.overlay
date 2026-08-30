@@ -1,0 +1,12 @@
+/{
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        left_trackpad_split: left_trackpad_split@12 {
+            compatible = "zmk,input-split";
+            reg = <12>;
+            device = <&pointing_device>;
+        };
+    };
+};

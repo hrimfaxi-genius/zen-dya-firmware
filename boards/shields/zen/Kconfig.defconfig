@@ -1,0 +1,18 @@
+if SHIELD_ZEN_LEFT || SHIELD_ZEN_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "ZEN"
+
+config ZMK_SPLIT
+    default y
+
+config SPI
+    default y
+
+config INPUT
+    default y
+
+config ZMK_MOUSE
+    default y
+
+endif

@@ -82,11 +82,11 @@ describe("App Component", () => {
       ).toBeInTheDocument();
 
       const repoLink = screen.getByRole("link", {
-        name: "cormoran/zmk-module-runtime-input-processor",
+        name: "hrimfaxi-genius/zen-dya-firmware",
       });
       expect(repoLink).toHaveAttribute(
         "href",
-        "https://github.com/cormoran/zmk-module-runtime-input-processor"
+        "https://github.com/hrimfaxi-genius/zen-dya-firmware"
       );
 
       expect(screen.getByText(/Built from/i)).toBeInTheDocument();
