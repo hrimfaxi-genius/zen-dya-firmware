@@ -15,7 +15,7 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: v0.3+custom-studio-protocol
+      revision: main+custom-studio-protocol
       import:
         file: app/west.yml
     - name: zmk-component-bmp-boost
@@ -39,8 +39,6 @@ manifest:
       revision: v1
     - name: zmk-feature-custom-settings
       remote: cormoran
-      # Last revision before the Zephyr 4-only `configdefault` Kconfig syntax.
-      # ZEN's bmp_boost stack is based on ZMK v0.3 / Zephyr 3.x.
-      revision: 5727f85b3812b9456832784385d951a56f95a569
+      revision: main
   self:
     path: config

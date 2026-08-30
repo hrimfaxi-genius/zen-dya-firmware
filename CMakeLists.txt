@@ -3,15 +3,20 @@ zephyr_include_directories(include)
 
 # ZEN shield support (sensor drivers and trackpad initialization).
 if(CONFIG_SHIELD_ZEN_LEFT OR CONFIG_SHIELD_ZEN_RIGHT)
-    zephyr_library()
     zephyr_include_directories(${APPLICATION_SOURCE_DIR}/include)
     zephyr_include_directories(${CMAKE_CURRENT_SOURCE_DIR}/drivers/iqs7211e/include)
-    zephyr_library_sources(src/mini_trackpad_init_reg.c)
-    zephyr_library_sources_ifdef(CONFIG_PMW3610_ALT drivers/pmw3610_alt/src/pmw3610.c)
-    zephyr_library_sources_ifdef(CONFIG_IQS7211E
-        drivers/iqs7211e/src/iqs7211e.c
-        drivers/iqs7211e/src/iqs7211e_reg.c
-    )
+    target_sources(app PRIVATE src/mini_trackpad_init_reg.c)
+
+    if(CONFIG_PMW3610_ALT)
+        target_sources(app PRIVATE drivers/pmw3610_alt/src/pmw3610.c)
+    endif()
+
+    if(CONFIG_IQS7211E)
+        target_sources(app PRIVATE
+            drivers/iqs7211e/src/iqs7211e.c
+            drivers/iqs7211e/src/iqs7211e_reg.c
+        )
+    endif()
 endif()
 
 if(CONFIG_ZMK_RUNTIME_INPUT_PROCESSOR)

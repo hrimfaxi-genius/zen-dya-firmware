@@ -55,7 +55,7 @@ manifest:
     # Below setting required to use unofficial studio custom RPC feature
     - name: zmk
       remote: cormoran
-      revision: v0.3+custom-studio-protocol
+      revision: main+custom-studio-protocol
       import:
         file: app/west.yml
     # Persistent settings storage backend used by this module
