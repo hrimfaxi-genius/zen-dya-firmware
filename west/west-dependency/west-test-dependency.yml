@@ -22,5 +22,7 @@ manifest:
     # from the zmk-renode-test GitHub Action's own checkout, not a west dep.
     - name: zmk-west-commands
       remote: cormoran
-      revision: main
+      # Last revision that still ships the renode-studio-uart snippet used
+      # by the legacy Renode smoke-test artifact below.
+      revision: 6f0f811410e93952b80fda484098e74b4cbd3074
       import: true

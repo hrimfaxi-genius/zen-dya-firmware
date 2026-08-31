@@ -63,17 +63,17 @@
         #address-cells = <1>;
         #size-cells = <0>;
 
-        left_trackball_pmw3610_split: left_trackball_pmw3610_split@10 {
+        left_trackball_pmw3610_split: left_trackball_pmw3610_split@a {
             compatible = "zmk,input-split";
             reg = <10>;
         };
 
-        left_trackball_paw3222_split: left_trackball_paw3222_split@11 {
+        left_trackball_paw3222_split: left_trackball_paw3222_split@b {
             compatible = "zmk,input-split";
             reg = <11>;
         };
 
-        left_trackpad_split: left_trackpad_split@12 {
+        left_trackpad_split: left_trackpad_split@c {
             compatible = "zmk,input-split";
             reg = <12>;
         };
