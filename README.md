@@ -62,6 +62,10 @@ manifest:
     - name: zmk-feature-custom-settings
       remote: cormoran
       revision: main
+    # BLE profile/split connection management from DYA
+    - name: zmk-module-ble-management
+      remote: cormoran
+      revision: main
 ```
 
 ### 2. Enable the feature in your `config/<shield>.conf`
@@ -75,6 +79,10 @@ CONFIG_ZMK_RUNTIME_INPUT_PROCESSOR=y
 # Enable studio custom RPC features for web UI
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_RUNTIME_INPUT_PROCESSOR_STUDIO_RPC=y
+
+# Enable BLE profile and split connection management in DYA
+CONFIG_ZMK_BLE_MANAGEMENT=y
+CONFIG_ZMK_BLE_MANAGEMENT_STUDIO_RPC=y
 
 # Required when the Studio RPC is enabled: "Refresh List" paces its
 # per-processor notifications on ZMK's shared low-priority work queue, and
