@@ -41,8 +41,5 @@ manifest:
     - name: zmk-feature-custom-settings
       remote: cormoran
       revision: main
-    - name: zmk-module-ble-management
-      remote: cormoran
-      revision: 57738cc4fc6ba80e82a7ac57741a0339cb186cd4
   self:
     path: config
