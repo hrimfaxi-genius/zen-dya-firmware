@@ -1,6 +1,6 @@
 # Design: 左右(central/peripheral)ペアリング不良の切り分け用デバッグログビルド
 
-Status: implemented (容量削減版、ユーザーによる書き込み待ち)
+Status: implemented (容量削減版、CI成功待ち/ユーザーによる書き込み待ち)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -195,7 +195,11 @@ DBGログは不要なので、以下の方針で削る。
    容量が収まらない場合にのみ、`CONFIG_LOG_BUFFER_SIZE` を
    4096→2048に減らすことを次の候補として検討する。
 
-### 実装手順(Codex 向け)
+### 実装手順(Codex 向け・最小限)
+
+このタスクは設定ファイルの機械的な削除のみで、ローカル検証やレポート作成は
+不要。以下の3手順だけでよい(トークン節約のため、ローカルビルド実行・
+メモリ使用量の記録・その他の追加検証は行わないこと)。
 
 1. `build.yaml` の `zen_right_trackball_pmw3610_central_debug` エントリの
    `snippet:` から `input-trackball-pmw3610 input-listener
@@ -204,35 +208,11 @@ DBGログは不要なので、以下の方針で削る。
 2. `snippets/split-pairing-debug/split-pairing-debug.conf` から
    `CONFIG_BT_KEYS_LOG_LEVEL_DBG`, `CONFIG_BT_ATT_LOG_LEVEL_DBG`,
    `CONFIG_BT_GATT_LOG_LEVEL_DBG`, `CONFIG_BT_SETTINGS_LOG_LEVEL_DBG`
-   の4行を削除(コメントアウトではなく削除でよい)し、どのログドメインを
-   なぜ残したかのコメントを更新する。
-3. ローカルの `python -m unittest` でビルドが通ることを確認できるなら確認する。
-   ただしこの環境ではWest/Zephyr SDK/CMake/Ninjaのローカル構築がなく
-   `west`コマンド自体が動かない可能性が高いため、実行できなければこの手順は
-   省略し、次のCI確認のみで進めてよい。
-4. 可能であれば、CI(GitHub Actions)のビルドログ、または `west build`
-   実行時のメモリ使用量サマリ(`Memory region` テーブルなど)から
-   `zen_right_trackball_pmw3610_central_debug` のFLASH使用率を確認し、
-   本設計ドキュメントの本セクションか実装コメントに実際の使用率を
-   一言記録する(次回また容量不足になった場合の目安にするため)。
-5. コミットし、GitHub Actions のビルドが成功することを確認する。
-6. 完了したら本ファイルの `Status:` 行を
-   `implemented(容量削減版、ユーザーによる書き込み待ち)` のように更新する。
-   ユーザーには「新しいdebug UF2を右手に書き込んで容量不足が解消したか、
-   解消した場合は上記『実装したログ構成と採取手順』の手順でログを
-   採取してほしい」と伝えること。
-
-### 容量削減版の実装結果
-
-commit `02ccd8c` でデバッグ用artifactを
-`zmk-usb-logging split-pairing-debug split-central` のみに縮小し、BT debug
-ログも `HCI_CORE`、`CONN`、`SMP` の3領域へ限定した。GitHub Actions
-`Build ZEN DYA firmware #12` の実測値は次のとおり。
-
-- 第1版: FLASH `406,644 B / 712 KB (55.77%)`、UF2 `813,568 B`
-- 容量削減版: FLASH `376,664 B / 712 KB (51.66%)`、UF2 `753,664 B`
-- 削減量: FLASH `29,980 B`、UF2 `59,904 B`
-
-通常版central/peripheralを含むファームウェアビルドと、ZMK/Renode回帰テストは
-どちらも成功した。実際のブートローダードライブへのコピー可否は、容量削減版UF2を
-使ってユーザーが実機確認する。
+   の4行を削除する(コメントアウトではなく削除)。
+3. コミットしてpushし、本ファイルの `Status:` 行を
+   `implemented(容量削減版、ユーザーによる書き込み待ち)` に更新する。
+   **ローカルビルド確認は行わない**(このPCにWest/Zephyr SDK/CMake/Ninjaの
+   ローカル構築がないため)。**GitHub Actionsのビルド結果の確認・待機も
+   Codexは行わない**(push後にActionsの完了を待つ/ログを見る、といった
+   作業はしなくてよい)。CI結果の確認はユーザーが自分でGitHubのActionsタブを
+   見て行う。
