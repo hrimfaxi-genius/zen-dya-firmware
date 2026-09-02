@@ -1,6 +1,6 @@
 # Design: DYA Studio に ZEN が表示されない問題の正式な修正
 
-Status: design (implementation delegated to Codex)
+Status: implemented
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景・これまでの経緯（再度やり直さないこと）
