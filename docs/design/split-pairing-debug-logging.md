@@ -1,6 +1,6 @@
 # Design: 左右(central/peripheral)ペアリング不良の切り分け用デバッグログビルド
 
-Status: design (implementation delegated to Codex)
+Status: implemented
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
