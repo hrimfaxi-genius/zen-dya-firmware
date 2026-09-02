@@ -1,6 +1,6 @@
 # Design: 左右(central/peripheral)ペアリング不良の切り分け用デバッグログビルド
 
-Status: follow-up needed — debug build (`zen_right_trackball_pmw3610_central_debug`) は容量不足で右手に書き込めない。フラッシュ使用量を削減する追加実装が必要。
+Status: implemented (容量削減版、ユーザーによる書き込み待ち)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -89,9 +89,15 @@ LEDの点滅パターンだけでは判断できないので、**central(右手)
    (central側のみでよい。peripheral側の内部状態はcentral側のログから
    ある程度推測できるはずだが、必要なら peripheral 用のデバッグ artifact も
    同様に追加してよい)を追加する。
-4. ローカルの `python -m unittest` でビルドが通ることを確認する
+4. ローカルの `python -m unittest` でビルドが通ることを確認できるなら確認する
    (Renodeテストは新規追加した一時アーティファクトに対しては必須ではない)。
+   **この環境(Windows、West/Zephyr SDK/CMake/Ninjaのローカル構築なし)では
+   `west`コマンドがCMake/Ninja/ARM GCCツールチェインを必要とし、実行できない
+   可能性が高い。その場合はこのローカル確認手順は省略してよい。**
 5. コミットし、GitHub Actions のビルドが成功することを確認する。
+   (このプロジェクトはこれまで一貫してローカルビルドではなくCI(GitHub Actions)の
+   成功をもって「ビルドが通る」ことの確認としてきた。ローカルにwest/Zephyr SDKの
+   環境がない場合は、CIの成功のみを確認基準とすればよい。)
 6. ユーザー向けに、README や本設計ドキュメントの追記として、
    「このデバッグ用UF2を central(右手)に書き込み、シリアルターミナル
    (例: PuTTY, Tera Term, `west espressif monitor`相当のもの、あるいは
@@ -200,7 +206,10 @@ DBGログは不要なので、以下の方針で削る。
    `CONFIG_BT_GATT_LOG_LEVEL_DBG`, `CONFIG_BT_SETTINGS_LOG_LEVEL_DBG`
    の4行を削除(コメントアウトではなく削除でよい)し、どのログドメインを
    なぜ残したかのコメントを更新する。
-3. ローカルの `python -m unittest` でビルドが通ることを確認する。
+3. ローカルの `python -m unittest` でビルドが通ることを確認できるなら確認する。
+   ただしこの環境ではWest/Zephyr SDK/CMake/Ninjaのローカル構築がなく
+   `west`コマンド自体が動かない可能性が高いため、実行できなければこの手順は
+   省略し、次のCI確認のみで進めてよい。
 4. 可能であれば、CI(GitHub Actions)のビルドログ、または `west build`
    実行時のメモリ使用量サマリ(`Memory region` テーブルなど)から
    `zen_right_trackball_pmw3610_central_debug` のFLASH使用率を確認し、
@@ -212,3 +221,18 @@ DBGログは不要なので、以下の方針で削る。
    ユーザーには「新しいdebug UF2を右手に書き込んで容量不足が解消したか、
    解消した場合は上記『実装したログ構成と採取手順』の手順でログを
    採取してほしい」と伝えること。
+
+### 容量削減版の実装結果
+
+commit `02ccd8c` でデバッグ用artifactを
+`zmk-usb-logging split-pairing-debug split-central` のみに縮小し、BT debug
+ログも `HCI_CORE`、`CONN`、`SMP` の3領域へ限定した。GitHub Actions
+`Build ZEN DYA firmware #12` の実測値は次のとおり。
+
+- 第1版: FLASH `406,644 B / 712 KB (55.77%)`、UF2 `813,568 B`
+- 容量削減版: FLASH `376,664 B / 712 KB (51.66%)`、UF2 `753,664 B`
+- 削減量: FLASH `29,980 B`、UF2 `59,904 B`
+
+通常版central/peripheralを含むファームウェアビルドと、ZMK/Renode回帰テストは
+どちらも成功した。実際のブートローダードライブへのコピー可否は、容量削減版UF2を
+使ってユーザーが実機確認する。
