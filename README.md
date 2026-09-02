@@ -170,6 +170,10 @@ compatible as before).
 
 ### Web Interface
 
+This project enables ZMK Studio locking so that the keyboard can advertise the
+Studio service to Web Bluetooth. Before choosing **Connect Bluetooth** in DYA,
+enter layer 3 and press its first key (`&studio_unlock`) to unlock Studio.
+
 1. Build and flash your firmware with the runtime input processor enabled
 2. Connect to your keyboard via USB (Web Serial) or Bluetooth (Web
    Bluetooth) using a Chromium-based browser (Chrome, Edge, ...) over HTTPS
