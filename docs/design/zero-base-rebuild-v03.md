@@ -1,6 +1,6 @@
 # Design: ゼロベース再構築(v0.3安定版ブランチ)で左右ペアリング不良を切り分ける
 
-Status: implemented(rebuild-stable-v0.3ブランチ、ユーザーによる確認待ち)
+Status: implemented(v3ブランチ、ユーザーによる確認待ち)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -35,9 +35,8 @@ Studio lock関連の変更が原因ではないと切り分け済み。一方 `m
 
 ## Owner decisions (do not re-litigate)
 
-1. 現行 `zen-dya-firmware` リポジトリ内に新しいブランチ(例:
-   `rebuild-stable-v0.3`)を作る。`main` ブランチ(現行の実績のある成果物)
-   には一切手を加えない。
+1. 現行 `zen-dya-firmware` リポジトリ内に新しいブランチ `v3` を作る。
+   `main` ブランチ(現行の実績のある成果物)には一切手を加えない。
 2. `config/west.yml` の `zmk` の revision を `cormoran/zmk` の
    `v0.3+custom-studio-protocol` に変更する(現行の `main+custom-studio-protocol`
    から)。`zmk-component-bmp-boost` の revision は `zen-firmware` と同じ
@@ -73,7 +72,7 @@ Studio lock関連の変更が原因ではないと切り分け済み。一方 `m
 
 ## 実装手順(Codex 向け・最小限、正確な差分)
 
-1. `git checkout -b rebuild-stable-v0.3` で新ブランチを作成する。
+1. `git checkout -b v3` で新ブランチを作成する。
 
 2. `config/west.yml` を編集する:
    - `projects` の `zmk` エントリの `revision: main+custom-studio-protocol` を
@@ -144,7 +143,7 @@ Studio lock関連の変更が原因ではないと切り分け済み。一方 `m
    通り)。
 
 7. 本ファイルの `Status:` 行を
-   `implemented(rebuild-stable-v0.3ブランチ、ユーザーによる確認待ち)` に更新する。
+   `implemented(v3ブランチ、ユーザーによる確認待ち)` に更新する。
 
 ## Files touched
 
@@ -153,9 +152,205 @@ Studio lock関連の変更が原因ではないと切り分け済み。一方 `m
 - `boards/shields/zen/zen_right.overlay`
 - `build.yaml`
 
+## 追加修正(Codex向け・ビルドエラーの修正)
+
+`v3`(実装時は`rebuild-stable-v0.3`という名前でCodexが作成)ブランチの
+GitHub Actions手動実行(Run #16)で、`zen_right`のビルドが2つとも
+(通常版・debug版)以下のエラーで失敗した:
+
+```
+devicetree error: /pointing_listener: undefined node label 'zen_pointer_runtime'
+```
+
+原因は、当初の実装手順で見落としていたファイルがあったため。
+`boards/shields/zen/zen_right.overlay` は指示通り修正されたが、
+`snippets/input-trackball-pmw3610/input-trackball-pmw3610.overlay`
+(トラックボール用snippet、build.yamlの`zen_right`アーティファクトで
+使われている)が `&pointing_listener` を**再度上書き**しており、
+そちらがまだ削除したはずの `&zen_pointer_runtime` / `&zen_scroll_runtime`
+を参照したままだった。同様に
+`snippets/input-split-listener-left-all/input-split-listener-left-all.overlay`
+も独自に `zen_left_pointer_runtime` / `zen_left_scroll_runtime`
+(`compatible = "zmk,input-processor-runtime"`)を定義しており、
+`zmk-module-runtime-input-processor` をwest.ymlから外すとこのcompatibleの
+バインディングが見つからずビルドが失敗する見込み。
+
+以下2ファイルを、本家 `zen-firmware` の同名ファイルと**完全に同じ内容**に
+置き換える:
+
+1. `snippets/input-trackball-pmw3610/input-trackball-pmw3610.overlay`:
+   ```
+   #include <dt-bindings/zmk/input_transform.h>
+
+   / {
+       pmw3610_scroll_scaler: pmw3610_scroll_scaler {
+           compatible = "zmk,input-processor-scaler";
+           #input-processor-cells = <2>;
+           type = <INPUT_EV_REL>;
+           codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+           track-remainders;
+       };
+   };
+
+   &spi0 {
+       status = "okay";
+       compatible = "nordic,nrf-spim";
+       pinctrl-0 = <&spi0_default>;
+       pinctrl-1 = <&spi0_sleep>;
+       pinctrl-names = "default", "sleep";
+       cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+
+       trackball: pointing_device: pointing_device@0 {
+           status = "okay";
+           compatible = "pixart,pmw3610-alt";
+           reg = <0>;
+           spi-max-frequency = <2000000>;
+           irq-gpios = <&gpio0 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+           cpi = <400>;
+           evt-type = <INPUT_EV_REL>;
+           x-input-code = <INPUT_REL_X>;
+           y-input-code = <INPUT_REL_Y>;
+           force-awake;
+       };
+   };
+
+   &pointing_listener {
+       input-processors =
+           <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
+           <&zip_temp_layer 1 500>;
+
+       scroller {
+           layers = <4>;
+           input-processors =
+               <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
+               <&zip_xy_to_scroll_mapper>,
+               <&pmw3610_scroll_scaler 1 4>;
+           process-next;
+       };
+   };
+   ```
+
+2. `snippets/input-split-listener-left-all/input-split-listener-left-all.overlay`:
+   ```
+   #include <dt-bindings/zmk/input_transform.h>
+
+   / {
+       left_paw3222_scroll_scaler: left_paw3222_scroll_scaler {
+           compatible = "zmk,input-processor-scaler";
+           #input-processor-cells = <2>;
+           type = <INPUT_EV_REL>;
+           codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+           track-remainders;
+       };
+
+       left_pmw3610_scroll_scaler: left_pmw3610_scroll_scaler {
+           compatible = "zmk,input-processor-scaler";
+           #input-processor-cells = <2>;
+           type = <INPUT_EV_REL>;
+           codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+           track-remainders;
+       };
+
+       left_trackpad_scroll_scaler: left_trackpad_scroll_scaler {
+           compatible = "zmk,input-processor-scaler";
+           #input-processor-cells = <2>;
+           type = <INPUT_EV_REL>;
+           codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+           track-remainders;
+       };
+
+       split_inputs {
+           #address-cells = <1>;
+           #size-cells = <0>;
+
+           left_trackball_pmw3610_split: left_trackball_pmw3610_split@10 {
+               compatible = "zmk,input-split";
+               reg = <10>;
+           };
+
+           left_trackball_paw3222_split: left_trackball_paw3222_split@11 {
+               compatible = "zmk,input-split";
+               reg = <11>;
+           };
+
+           left_trackpad_split: left_trackpad_split@12 {
+               compatible = "zmk,input-split";
+               reg = <12>;
+           };
+       };
+
+       left_trackball_pmw3610_listener: left_trackball_pmw3610_listener {
+           compatible = "zmk,input-listener";
+           device = <&left_trackball_pmw3610_split>;
+           status = "okay";
+           input-processors =
+               <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+               <&zip_temp_layer 1 500>;
+
+           scroller {
+               layers = <4>;
+               input-processors =
+                   <&zip_xy_scaler 1 56>,
+                   <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>,
+                   <&zip_xy_to_scroll_mapper>,
+                   <&left_pmw3610_scroll_scaler 1 20>;
+               process-next;
+           };
+       };
+
+       left_trackball_paw3222_listener: left_trackball_paw3222_listener {
+           compatible = "zmk,input-listener";
+           device = <&left_trackball_paw3222_split>;
+           status = "okay";
+           input-processors =
+               <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+               <&zip_temp_layer 1 500>;
+
+           scroller {
+               layers = <4>;
+               input-processors =
+                   <&zip_xy_scaler 1 56>,
+                   <&zip_xy_to_scroll_mapper>,
+                   <&left_paw3222_scroll_scaler 1 28>;
+               process-next;
+           };
+       };
+
+       left_trackpad_listener: left_trackpad_listener {
+           compatible = "zmk,input-listener";
+           device = <&left_trackpad_split>;
+           status = "okay";
+           input-processors =
+               <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+               <&zip_temp_layer 1 500>;
+
+           scroller {
+               layers = <4>;
+               input-processors =
+                   <&zip_xy_scaler 1 960>,
+                   <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+                   <&zip_xy_to_scroll_mapper>,
+                   <&left_trackpad_scroll_scaler 1 28>;
+               process-next;
+           };
+       };
+   };
+   ```
+
+3. 念のため、リポジトリ全体を以下のキーワードでgrepし、他に
+   `zen_pointer_runtime` / `zen_scroll_runtime` / `zen_left_pointer_runtime` /
+   `zen_left_scroll_runtime` / `zmk,input-processor-runtime` /
+   `RUNTIME_INPUT_PROCESSOR` を参照している箇所が残っていないか確認する
+   (`zephyr/`, `dependencies/`, `build/` ディレクトリは除外してよい)。
+   見つかった場合は同様に本家`zen-firmware`の対応ファイルと比較し、
+   DYA関連の参照を削除する。
+4. コミットしてpushし、`workflow_dispatch`で「Build ZEN DYA firmware」を
+   `v3`(またはCodexが作成した実際のブランチ名)で再実行できる状態にする
+   (実行自体はユーザーが行う。Codexは待たない)。
+
 ## 次のステップ(このドキュメントの対象外・後続タスク)
 
-1. ユーザーが `rebuild-stable-v0.3` ブランチのCI成功を確認し、
+1. ユーザーが `v3` ブランチのCI成功を確認し、
    `zen_right_trackball_pmw3610_central.uf2` / `zen_left_peripheral.uf2`
    (通常版、debugではない方)を実機に書き込んで左右ペアリングを確認する。
    - **直る場合**: `main+custom-studio-protocol`(浮動ブランチ)が左右

@@ -1,40 +1,6 @@
 #include <dt-bindings/zmk/input_transform.h>
-#include <dt-bindings/zmk/keys.h>
 
 / {
-    zen_left_pointer_runtime: zen_left_pointer_runtime {
-        compatible = "zmk,input-processor-runtime";
-        processor-label = "leftptr";
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_X>;
-        y-codes = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-        rotation-degrees = <0>;
-        track-remainders;
-        temp-layer-enabled;
-        temp-layer = <1>;
-        temp-layer-activation-delay-ms = <0>;
-        temp-layer-deactivation-delay-ms = <500>;
-        temp-layer-transparent-behavior = <&trans>;
-        temp-layer-kp-behavior = <&kp>;
-        temp-layer-keep-keycodes = <LEFT_CONTROL LEFT_SHIFT LEFT_ALT LEFT_GUI RIGHT_CONTROL RIGHT_SHIFT RIGHT_ALT RIGHT_GUI>;
-        #input-processor-cells = <0>;
-    };
-
-    zen_left_scroll_runtime: zen_left_scroll_runtime {
-        compatible = "zmk,input-processor-runtime";
-        processor-label = "leftscr";
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_HWHEEL>;
-        y-codes = <INPUT_REL_WHEEL>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-        rotation-degrees = <0>;
-        track-remainders;
-        #input-processor-cells = <0>;
-    };
-
     left_paw3222_scroll_scaler: left_paw3222_scroll_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
@@ -63,17 +29,17 @@
         #address-cells = <1>;
         #size-cells = <0>;
 
-        left_trackball_pmw3610_split: left_trackball_pmw3610_split@a {
+        left_trackball_pmw3610_split: left_trackball_pmw3610_split@10 {
             compatible = "zmk,input-split";
             reg = <10>;
         };
 
-        left_trackball_paw3222_split: left_trackball_paw3222_split@b {
+        left_trackball_paw3222_split: left_trackball_paw3222_split@11 {
             compatible = "zmk,input-split";
             reg = <11>;
         };
 
-        left_trackpad_split: left_trackpad_split@c {
+        left_trackpad_split: left_trackpad_split@12 {
             compatible = "zmk,input-split";
             reg = <12>;
         };
@@ -85,7 +51,7 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zen_left_pointer_runtime>;
+            <&zip_temp_layer 1 500>;
 
         scroller {
             layers = <4>;
@@ -93,8 +59,7 @@
                 <&zip_xy_scaler 1 56>,
                 <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>,
                 <&zip_xy_to_scroll_mapper>,
-                <&left_pmw3610_scroll_scaler 1 20>,
-                <&zen_left_scroll_runtime>;
+                <&left_pmw3610_scroll_scaler 1 20>;
             process-next;
         };
     };
@@ -105,15 +70,14 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zen_left_pointer_runtime>;
+            <&zip_temp_layer 1 500>;
 
         scroller {
             layers = <4>;
             input-processors =
                 <&zip_xy_scaler 1 56>,
                 <&zip_xy_to_scroll_mapper>,
-                <&left_paw3222_scroll_scaler 1 28>,
-                <&zen_left_scroll_runtime>;
+                <&left_paw3222_scroll_scaler 1 28>;
             process-next;
         };
     };
@@ -124,7 +88,7 @@
         status = "okay";
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zen_left_pointer_runtime>;
+            <&zip_temp_layer 1 500>;
 
         scroller {
             layers = <4>;
@@ -132,8 +96,7 @@
                 <&zip_xy_scaler 1 960>,
                 <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
                 <&zip_xy_to_scroll_mapper>,
-                <&left_trackpad_scroll_scaler 1 28>,
-                <&zen_left_scroll_runtime>;
+                <&left_trackpad_scroll_scaler 1 28>;
             process-next;
         };
     };

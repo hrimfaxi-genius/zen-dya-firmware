@@ -36,15 +36,14 @@
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP)>,
-        <&zen_pointer_runtime>;
+        <&zip_temp_layer 1 500>;
 
     scroller {
         layers = <4>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
-            <&pmw3610_scroll_scaler 1 8>,
-            <&zen_scroll_runtime>;
+            <&pmw3610_scroll_scaler 1 4>;
         process-next;
     };
 };

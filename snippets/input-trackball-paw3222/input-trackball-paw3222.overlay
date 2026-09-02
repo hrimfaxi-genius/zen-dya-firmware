@@ -22,8 +22,7 @@
         layers = <4>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
-            <&scroll_scaler 1 28>,
-            <&zen_scroll_runtime>;
+            <&scroll_scaler 1 28>;
         process-next;
     };
 };
