@@ -1,6 +1,6 @@
 # Design: 左右(central/peripheral)ペアリング不良の切り分け用デバッグログビルド
 
-Status: implemented
+Status: follow-up needed — debug build (`zen_right_trackball_pmw3610_central_debug`) は容量不足で右手に書き込めない。フラッシュ使用量を削減する追加実装が必要。
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -32,6 +32,12 @@ commit `24d1ae1`)を実機に適用したところ、**別の問題**が見つ�
    - **左は1回だけ点滅した後、完全に消灯したまま**沈黙する。
      (「接続確立時の短時間点灯」なのか、その直後に処理が停止/クラッシュ
      しているのかは点滅回数だけでは判別できない)
+5. **(今回追加)** `d266629`で実装されたデバッグ用アーティファクト
+   `zen_right_trackball_pmw3610_central_debug.uf2` は、ビルド自体はCIで
+   成功しているが、生成されたUF2をブートローダーのドライブへコピーする際に
+   **容量不足エラーになり書き込めない**ことが判明した。
+   → ログ採取を実施する前に、このデバッグビルドのフラッシュ使用量を
+   削減する必要がある。
 
 ## 目的
 
@@ -104,7 +110,7 @@ LEDの点滅パターンだけでは判断できないので、**central(右手)
 - 必要に応じて `docs/design/split-pairing-debug-logging.md`(本ファイル)に
   「ログの見方」を追記
 
-## 実装したログ構成と採取手順
+## 実装したログ構成と採取手順(第1版・容量不足のため未使用)
 
 デバッグ用アーティファクトは
 `zen_right_trackball_pmw3610_central_debug.uf2`。通常版とは異なり、
@@ -131,3 +137,78 @@ Windowsでの採取手順:
 
 ログ取得後は電池消費とログ用メモリ負荷を避けるため、右手を通常版の
 `zen_right_trackball_pmw3610_central.uf2` に戻すこと。
+
+**この構成は `bmp_boost` のフラッシュ容量に収まらず、UF2をブートローダーの
+ドライブへコピーする際に「容量不足」エラーになることが確認された
+(`snippets/split-pairing-debug/split-pairing-debug.conf` で7種類のBT DBG
+ログドメイン全部を同時に有効化しつつ、トラックボール/ポインタ関連の
+snippet(`input-trackball-pmw3610 input-listener input-split-listener-left-all`)
+もそのまま含めていたため、コード領域が肥大化したと推測される)。
+下記「フラッシュ削減の追加実装」を先に行うこと。**
+
+## フラッシュ削減の追加実装(Codex 向け、次にやること)
+
+目的は、「容量不足」エラーが出ずに `zen_right_trackball_pmw3610_central_debug.uf2`
+をビルド・書き込みできる状態にすること。今回の目的は**左右ペアリング不良の
+切り分け**であり、トラックボール等のポインタ機能やBluetoothの全レイヤーの
+DBGログは不要なので、以下の方針で削る。
+
+### Owner decisions (do not re-litigate)
+
+1. **デバッグ専用アーティファクトのみ変更する。** 本番用の
+   `zen_right_trackball_pmw3610_central` / `zen_left_peripheral` の定義・
+   `snippets/split-pairing-debug/` 以外の既存ファイルには手を加えない。
+2. デバッグ用アーティファクトから、**トラックボール/ポインタ入力関連の
+   snippet(`input-trackball-pmw3610`, `input-listener`,
+   `input-split-listener-left-all`)を外してよい。**
+   これらは左右ペアリングの診断には不要であり、フラッシュを消費する
+   一番の候補。`build.yaml` のデバッグ用アーティファクトの `snippet:` から
+   これらを取り除き、`zmk-usb-logging split-pairing-debug split-central`
+   のみに絞る(central自体を示す `split-central` snippetは必須なので残す)。
+3. `snippets/split-pairing-debug/split-pairing-debug.conf` の
+   BT DBGログドメインを、**接続確立とペアリング/ボンディングの診断に
+   直接関係するものだけに絞る**。具体的には:
+   - 残す: `CONFIG_ZMK_LOG_LEVEL_DBG`(ZMKのsplit/central自体のログに必要)、
+     `CONFIG_BT_HCI_CORE_LOG_LEVEL_DBG`(スキャン/アドバタイズ/接続確立の
+     生イベントが見える)、`CONFIG_BT_CONN_LOG_LEVEL_DBG`(接続状態遷移)、
+     `CONFIG_BT_SMP_LOG_LEVEL_DBG`(ペアリング/ボンディングの成否)。
+   - いったん外す(デフォルト/INFに戻す): `CONFIG_BT_KEYS_LOG_LEVEL_DBG`,
+     `CONFIG_BT_ATT_LOG_LEVEL_DBG`, `CONFIG_BT_GATT_LOG_LEVEL_DBG`,
+     `CONFIG_BT_SETTINGS_LOG_LEVEL_DBG`。
+     これらはペアリングそのものより後段(GATT探索やボンディング情報の
+     永続化)に関わるログで、まずは「そもそも接続/ペアリングが成立して
+     いるか」を見るのが優先のため今回は削る。もし手順3-4を実施しても
+     原因箇所が絞れない場合、次のイテレーションでATT/GATT/SETTINGSの
+     どれかだけを個別に追加する(全部同時に戻さない)。
+   - これでも容量不足が解消しない場合は、`CONFIG_BT_HCI_CORE_LOG_LEVEL_DBG`
+     を先に落とす候補とする(HCI_CORE は情報量が多い分ログ文字列も多く、
+     フラッシュ消費が大きい可能性があるため)。
+4. `CONFIG_LOG_BUFFER_SIZE` や `CONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS`
+   などのRAM/タイミング系の設定は今回の容量不足(フラッシュ)とは直接
+   関係が薄いと考えられるため、まずは変更しなくてよい。手順3までの変更で
+   容量が収まらない場合にのみ、`CONFIG_LOG_BUFFER_SIZE` を
+   4096→2048に減らすことを次の候補として検討する。
+
+### 実装手順(Codex 向け)
+
+1. `build.yaml` の `zen_right_trackball_pmw3610_central_debug` エントリの
+   `snippet:` から `input-trackball-pmw3610 input-listener
+   input-split-listener-left-all` を削除する
+   (`zmk-usb-logging split-pairing-debug split-central` のみにする)。
+2. `snippets/split-pairing-debug/split-pairing-debug.conf` から
+   `CONFIG_BT_KEYS_LOG_LEVEL_DBG`, `CONFIG_BT_ATT_LOG_LEVEL_DBG`,
+   `CONFIG_BT_GATT_LOG_LEVEL_DBG`, `CONFIG_BT_SETTINGS_LOG_LEVEL_DBG`
+   の4行を削除(コメントアウトではなく削除でよい)し、どのログドメインを
+   なぜ残したかのコメントを更新する。
+3. ローカルの `python -m unittest` でビルドが通ることを確認する。
+4. 可能であれば、CI(GitHub Actions)のビルドログ、または `west build`
+   実行時のメモリ使用量サマリ(`Memory region` テーブルなど)から
+   `zen_right_trackball_pmw3610_central_debug` のFLASH使用率を確認し、
+   本設計ドキュメントの本セクションか実装コメントに実際の使用率を
+   一言記録する(次回また容量不足になった場合の目安にするため)。
+5. コミットし、GitHub Actions のビルドが成功することを確認する。
+6. 完了したら本ファイルの `Status:` 行を
+   `implemented(容量削減版、ユーザーによる書き込み待ち)` のように更新する。
+   ユーザーには「新しいdebug UF2を右手に書き込んで容量不足が解消したか、
+   解消した場合は上記『実装したログ構成と採取手順』の手順でログを
+   採取してほしい」と伝えること。

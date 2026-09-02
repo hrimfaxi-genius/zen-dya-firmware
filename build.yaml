@@ -8,7 +8,7 @@ include:
   # CDC-ACM port carries readable boot/Bluetooth logs.
   - board: bmp_boost
     shield: zen_right
-    snippet: "zmk-usb-logging split-pairing-debug split-central input-trackball-pmw3610 input-listener input-split-listener-left-all"
+    snippet: "zmk-usb-logging split-pairing-debug split-central"
     artifact-name: zen_right_trackball_pmw3610_central_debug
 #  - board: bmp_boost
 #    shield: zen_right
