@@ -1,55 +1,18 @@
 #include "zen.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-#include <dt-bindings/zmk/keys.h>
-
-/ {
-    zen_pointer_runtime: zen_pointer_runtime {
-        compatible = "zmk,input-processor-runtime";
-        processor-label = "pointer";
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_X>;
-        y-codes = <INPUT_REL_Y>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-        rotation-degrees = <0>;
-        track-remainders;
-        temp-layer-enabled;
-        temp-layer = <1>;
-        temp-layer-activation-delay-ms = <0>;
-        temp-layer-deactivation-delay-ms = <500>;
-        temp-layer-transparent-behavior = <&trans>;
-        temp-layer-kp-behavior = <&kp>;
-        temp-layer-keep-keycodes = <LEFT_CONTROL LEFT_SHIFT LEFT_ALT LEFT_GUI RIGHT_CONTROL RIGHT_SHIFT RIGHT_ALT RIGHT_GUI>;
-        #input-processor-cells = <0>;
-    };
-
-    zen_scroll_runtime: zen_scroll_runtime {
-        compatible = "zmk,input-processor-runtime";
-        processor-label = "scroll";
-        type = <INPUT_EV_REL>;
-        x-codes = <INPUT_REL_HWHEEL>;
-        y-codes = <INPUT_REL_WHEEL>;
-        scale-multiplier = <1>;
-        scale-divisor = <1>;
-        rotation-degrees = <0>;
-        track-remainders;
-        #input-processor-cells = <0>;
-    };
-};
 
 &pointing_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zen_pointer_runtime>;
+        <&zip_temp_layer 1 500>;
 
     scroller {
         layers = <4>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_to_scroll_mapper>,
-            <&scroll_scaler 1 28>,
-            <&zen_scroll_runtime>;
+            <&scroll_scaler 1 28>;
         process-next;
     };
 };

@@ -15,14 +15,13 @@ manifest:
   projects:
     - name: zmk
       remote: cormoran
-      revision: main+custom-studio-protocol
+      revision: v0.3+custom-studio-protocol
       import:
         file: app/west.yml
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       import: west.yml
-      # Zephyr 4 board metadata/Kconfig layout (ZMK main).
-      revision: 2f5567523b6f0bc39575d48ed746ed9d635edf8b
+      revision: v0.2
     - name: zmk-feature-status-led
       remote: sekigon-gonnoc
       revision: main
@@ -38,8 +37,5 @@ manifest:
     - name: zmk-scroll-snap
       remote: kot149
       revision: v1
-    - name: zmk-feature-custom-settings
-      remote: cormoran
-      revision: main
   self:
     path: config
