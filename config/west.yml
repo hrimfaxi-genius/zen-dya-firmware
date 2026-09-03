@@ -50,7 +50,7 @@ manifest:
       revision: main
     - name: zmk-feature-watchdog
       remote: cormoran
-      revision: main+custom-studio-protocol
+      revision: main
       import: true
     - name: zmk-feature-kscan-diagnostics
       remote: cormoran
