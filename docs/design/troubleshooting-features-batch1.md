@@ -1,6 +1,6 @@
 # Design: トラブルシューティング機能の追加(デバイス情報・ウォッチドッグ・キースイッチ診断・スタック使用量)
 
-Status: implemented(CI成功待ち/ユーザーによる実機確認待ち)
+Status: implemented, CI成功(Build ZEN DYA firmware #25, commit d3cd831) / ユーザーによる実機確認待ち。詳細は末尾の「実装後の追記」参照。
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -152,3 +152,17 @@ DYA Studioの「トラブルシューティング」タブに以下5つの項目
 
 「トラックボールセンサー(PMW3610)」は本ドキュメントの対象外。動作検証中の
 ドライバ置き換えが必要なため、別途設計ドキュメントで扱う。
+
+## 実装後の追記(2026-09-04, Claude)
+
+CIで2件の不具合が見つかり、Claudeが直接 `main` ブランチにコミットして修正した(Codexへの実装指示は不要だった)。
+
+1点目: `config/west.yml` の `zmk-feature-watchdog` エントリの `revision` を、上の「実装手順」節および「互換性の確認」節に記載した `main+custom-studio-protocol` のまま設定したところ、Build ZEN DYA firmware #24 が `fatal error: couldn't find remote ref main+custom-studio-protocol` で失敗した。この特殊ブランチ名は `cormoran/zmk` フォーク自身(zmkエントリ)専用のものであり、`zmk-feature-watchdog` リポジトリ自体には存在しない(実際のブランチは `main` のみ)。他の3モジュール(device-info, kscan-diagnostics, devtool)は元から正しく `revision: main` だった。「互換性の確認」節の「4モジュールとも、必要とする `zmk` のrevisionは `main+custom-studio-protocol`」という記述も誤りで、正しくは「4モジュール自身は `revision: main` を使う(`main+custom-studio-protocol` は `zmk` フォーク自体のエントリにのみ適用される)」。コミット `ce9b02d` で修正。
+
+2点目: 1点目の修正後、Build ZEN DYA firmware #24 は zen_left のビルドが `fatal error: proto/zmk/custom.pb.h: No such file or directory` で失敗した。原因は `zen_left.conf` にも `CONFIG_ZMK_STUDIO=y` が設定されている(split/lockingの都合で既存設定)ため、`CONFIG_ZMK_KSCAN_DIAGNOSTICS_STUDIO_RPC` がデフォルトでON(`depends on ZMK_STUDIO` かつ `default y`)になり、central専用のはずの `src/studio/*.c` がzen_left側でもビルド対象になってしまったこと。この際に必要な `proto/zmk/custom.pb.h` は `CONFIG_ZMK_STUDIO_RPC_CUSTOM_SUBSYSTEM_REQUEST_PAYLOAD_MAX_BYTES`(zen_right.confのみ設定)がある場合にのみ生成されるため、zen_leftでは見つからずビルドエラーになっていた。`zen_left.conf` に `CONFIG_ZMK_KSCAN_DIAGNOSTICS_STUDIO_RPC=n` を追加して解決(peripheral側はStudio RPCハンドラ不要で、`CONFIG_ZMK_KSCAN_DIAGNOSTICS_SPLIT`側だけで中継応答できる、というモジュール自身のKconfigヘルプ記載通り)。コミット `d3cd831`。
+
+この2件の修正後、Build ZEN DYA firmware #25(commit d3cd831)・Test ZMK Module #24とも成功。CIは green。
+
+Owner decision 1(watchdogのsplit relayを無効化する)について: `cormoran/zmk-feature-watchdog` のKconfigを確認したところ、`CONFIG_ZMK_WATCHDOG_SPLIT_RELAY` のヘルプ文が更新されており、「2026-07-07に実機検証済み。以前壊れていた原因は本モジュール内の残留デバッグコード(早期return)であり、トランスポートやタイミングの問題ではなかった」と明記されていた。これを受けてユーザーに確認したところ、最新情報を信じて有効のままにする方針に決定(このオプションは `default y if ZMK_SPLIT` のため、split構成である本リポジトリでは明示的な設定をしなくても既にONになっている。追加のconf変更は不要)。Owner decision 1はこの追記により更新版として扱う。
+
+次のステップ: ユーザーが実機で4項目(デバイス情報・安定性・キースイッチ・スタック使用量)の動作確認を行う。Codex側の対応は、直接pushされた上記2コミット(`ce9b02d`, `d3cd831`)分の `git pull` による同期のみで、追加の実装作業は不要。
