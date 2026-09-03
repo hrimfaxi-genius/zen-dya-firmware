@@ -1,6 +1,6 @@
 # Design: 左右(central/peripheral)ペアリング不良の切り分け用デバッグログビルド
 
-Status: implemented (容量削減版、CI成功待ち/ユーザーによる書き込み待ち)
+Status: resolved(all clear方式で解決。デバッグビルドはbuild.yamlから削除済み)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景

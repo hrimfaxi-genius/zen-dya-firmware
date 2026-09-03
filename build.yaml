@@ -3,13 +3,6 @@ include:
     shield: zen_right
     snippet: "studio-rpc-usb-uart split-central input-trackball-pmw3610 input-listener input-split-listener-left-all"
     artifact-name: zen_right_trackball_pmw3610_central
-  # Temporary diagnostic build for split BLE pairing. It deliberately replaces
-  # studio-rpc-usb-uart with the ZMK USB logging console so the single exposed
-  # CDC-ACM port carries readable boot/Bluetooth logs.
-  - board: bmp_boost
-    shield: zen_right
-    snippet: "zmk-usb-logging split-pairing-debug split-central"
-    artifact-name: zen_right_trackball_pmw3610_central_debug
 #  - board: bmp_boost
 #    shield: zen_right
 #    snippet: "studio-rpc-usb-uart split-central input-trackball-paw3222 input-listener input-split-listener-left-all"

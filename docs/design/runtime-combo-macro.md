@@ -1,6 +1,6 @@
 # Design: ランタイムコンボ(zmk-feature-runtime-combo)の追加 + デバッグビルドの削除
 
-Status: design
+Status: implemented(CI成功待ち/ユーザーによる実機確認待ち)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
