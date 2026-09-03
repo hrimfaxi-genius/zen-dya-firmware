@@ -1,4 +1,4 @@
-# Design: ランタイムコンボ(zmk-feature-runtime-combo)の追加
+# Design: ランタイムコンボ(zmk-feature-runtime-combo)の追加 + デバッグビルドの削除
 
 Status: design
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
@@ -13,6 +13,12 @@ DYA Studio Web UIで「マクロコンボ」を開こうとすると、以下の
 これは `zmk-feature-runtime-combo`(Web UIから編集できるランタイムコンボを
 追加するZMKモジュール)が本リポジトリに未導入なため。ユーザーからの要望で
 今回追加する。
+
+あわせて、`docs/design/split-pairing-debug-logging.md` で追加した
+split pairing診断用のデバッグビルド(`zen_right_trackball_pmw3610_central_debug`)
+は、その後 all clear(左右両方に初期化キーを設定して片方ずつリセット)で
+問題が解決したため**もう不要**。今回のコミットで `build.yaml` から
+あわせて削除する。
 
 ## 互換性の確認(調査済み、再度やり直さないこと)
 
@@ -58,6 +64,15 @@ runtime-input-processor(DYA本体)の永続化バックエンドとして west.y
    もって確認とする。万一 `zen_right_trackball_pmw3610_central` の通常ビルドで
    容量不足が発生した場合は、その時点で対処法を別途検討する(今回は
    予防的な変更は行わない)。
+7. **`build.yaml` から `zen_right_trackball_pmw3610_central_debug` の
+   アーティファクト定義を削除する。** split pairing不良は all clear
+   (左右両方に初期化キーを設定して片方ずつリセット)で解決済みのため、
+   このデバッグビルドはもう作らなくてよい。`snippets/split-pairing-debug/`
+   ディレクトリ自体は今回は削除しなくてよい(build.yamlの参照を消すだけで十分。
+   ファイル削除は別途不要な整理として後回しでよい)。
+8. `docs/design/split-pairing-debug-logging.md` の `Status:` 行を
+   `resolved(all clear方式で解決。デバッグビルドはbuild.yamlから削除済み)`
+   に更新する。
 
 ## 実装手順(Codex 向け・最小限)
 
@@ -78,17 +93,27 @@ runtime-input-processor(DYA本体)の永続化バックエンドとして west.y
    ```
    (`CONFIG_ZMK_STUDIO=y` と `CONFIG_ZMK_LOW_PRIORITY_THREAD_STACK_SIZE=2048` は
    既存の設定をそのまま使うため追加しない。)
-3. コミットしてpushする。ローカルビルド確認・GitHub Actionsの結果待ちは
+3. `build.yaml` から `zen_right_trackball_pmw3610_central_debug` の
+   アーティファクト定義(6行分のエントリ)を削除する。
+   `zen_right_trackball_pmw3610_central`、`zen_left_peripheral`、
+   `settings_reset` の3エントリはそのまま残す。
+4. `docs/design/split-pairing-debug-logging.md` の `Status:` 行を
+   `resolved(all clear方式で解決。デバッグビルドはbuild.yamlから削除済み)`
+   に更新する。
+5. コミットしてpushする。ローカルビルド確認・GitHub Actionsの結果待ちは
    行わない(`codex-collaboration-workflow.md` のトークン節約ルール通り)。
-4. 本ファイルの `Status:` 行を `implemented(CI成功待ち/ユーザーによる実機確認待ち)`
+6. 本ファイルの `Status:` 行を `implemented(CI成功待ち/ユーザーによる実機確認待ち)`
    に更新する。
 
 ## Files touched
 
 - `config/west.yml`
 - `boards/shields/zen/zen_right.conf`
+- `build.yaml`
+- `docs/design/split-pairing-debug-logging.md`
 
-`zen_left.conf`, `config/keymap.keymap`, `src/`, `proto/`, `web/` は変更不要。
+`zen_left.conf`, `config/keymap.keymap`, `src/`, `proto/`, `web/`,
+`snippets/split-pairing-debug/` は変更不要。
 
 ## 次のステップ(このドキュメントの対象外)
 
