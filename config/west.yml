@@ -45,5 +45,20 @@ manifest:
       remote: cormoran
       revision: main
       import: true
+    - name: zmk-feature-device-info
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-watchdog
+      remote: cormoran
+      revision: main+custom-studio-protocol
+      import: true
+    - name: zmk-feature-kscan-diagnostics
+      remote: cormoran
+      revision: main
+      import: true
+    - name: zmk-module-devtool
+      remote: cormoran
+      revision: main
+      import: true
   self:
     path: config

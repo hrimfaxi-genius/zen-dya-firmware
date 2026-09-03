@@ -1,6 +1,6 @@
 # Design: トラブルシューティング機能の追加(デバイス情報・ウォッチドッグ・キースイッチ診断・スタック使用量)
 
-Status: design
+Status: implemented(CI成功待ち/ユーザーによる実機確認待ち)
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
