@@ -1,6 +1,6 @@
 # Design: トラブルシューティング機能の追加(デバイス情報・ウォッチドッグ・キースイッチ診断・スタック使用量)
 
-Status: implemented, CI成功(Build ZEN DYA firmware #25, commit d3cd831) / ユーザーによる実機確認待ち。詳細は末尾の「実装後の追記」参照。
+Status: implemented, CI成功(Build ZEN DYA firmware #25, commit d3cd831) / ユーザーによる実機確認待ち。詳細は末尾の「実装後の追Status: resolved — 実機確認済み(2026-09-04)。DYA Studioのトラブルシューティングタブで4項目(デバイス情報・安定性/ウォッチドッグ・キースイッチ診断・スタック使用量)すべて正常に情報取得できることを確認。詳細は末尾の「実装後の追記」参照。
 Owner: hrimfaxi-genius / Claude(調査・設計) / Codex(実装)
 
 ## 背景
@@ -166,3 +166,7 @@ CIで2件の不具合が見つかり、Claudeが直接 `main` ブランチにコ
 Owner decision 1(watchdogのsplit relayを無効化する)について: `cormoran/zmk-feature-watchdog` のKconfigを確認したところ、`CONFIG_ZMK_WATCHDOG_SPLIT_RELAY` のヘルプ文が更新されており、「2026-07-07に実機検証済み。以前壊れていた原因は本モジュール内の残留デバッグコード(早期return)であり、トランスポートやタイミングの問題ではなかった」と明記されていた。これを受けてユーザーに確認したところ、最新情報を信じて有効のままにする方針に決定(このオプションは `default y if ZMK_SPLIT` のため、split構成である本リポジトリでは明示的な設定をしなくても既にONになっている。追加のconf変更は不要)。Owner decision 1はこの追記により更新版として扱う。
 
 次のステップ: ユーザーが実機で4項目(デバイス情報・安定性・キースイッチ・スタック使用量)の動作確認を行う。Codex側の対応は、直接pushされた上記2コミット(`ce9b02d`, `d3cd831`)分の `git pull` による同期のみで、追加の実装作業は不要。
+
+## 実機確認結果(2026-09-04, hrimfaxi-genius)
+
+ビルドしたUF2(Build ZEN DYA firmware #26, commit 0ee48ce)を両手に書き込み、DYA Studioのトラブルシューティングタブで確認したところ、デバイス情報・安定性(ウォッチドッグ)・キースイッチ診断・スタック使用量の4項目すべて正常に情報を取得できることを確認した。本ドキュメントの作業は完了とする。
