@@ -1,6 +1,6 @@
 # Design: 新デザインのキーマップ(5レイヤー構成)を config/keymap.keymap に反映する
 
-Status: design
+Status: implemented
 Owner: nao / Claude(設計) / Codex(実装)
 
 ## 背景
@@ -149,4 +149,3 @@ Owner: nao / Claude(設計) / Codex(実装)
 ## Files touched
 
 - `config/keymap.keymap`
-
