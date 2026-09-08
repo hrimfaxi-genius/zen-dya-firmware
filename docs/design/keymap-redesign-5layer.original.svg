@@ -1,0 +1,429 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2050" viewBox="0 0 1120 2050" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-weight="600" stroke-width="1.5" text-anchor="middle">
+<rect x="0" y="0" width="1120" height="2050" fill="#f9fafb" stroke="none"/>
+<text x="560" y="34" font-size="26" font-weight="700" fill="#111827">ZEN Keymap — 5-Layer Design (original)</text>
+<text x="560" y="56" font-size="13" font-weight="400" fill="#6b7280">keymap-redesign-5layer.original.keymap ・ config/keymap.keymap に反映前のデザイン案</text>
+<text x="40" y="90" font-size="17" font-weight="700" text-anchor="start" fill="#111827">Layer 0 — Base</text>
+<text x="40" y="108" font-size="12" font-weight="400" text-anchor="start" fill="#6b7280">ベースレイヤー</text>
+<rect x="40" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="70" y="151" font-size="15" fill="#1f2937">Tab</text>
+<rect x="110" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="140" y="151" font-size="15" fill="#1f2937">Q</text>
+<rect x="180" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="210" y="151" font-size="15" fill="#1f2937">W</text>
+<rect x="250" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="280" y="151" font-size="15" fill="#1f2937">E</text>
+<rect x="320" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="350" y="151" font-size="15" fill="#1f2937">R</text>
+<rect x="390" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="420" y="151" font-size="15" fill="#1f2937">T</text>
+<rect x="670" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="700" y="151" font-size="15" fill="#1f2937">Y</text>
+<rect x="740" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="770" y="151" font-size="15" fill="#1f2937">U</text>
+<rect x="810" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="840" y="151" font-size="15" fill="#1f2937">I</text>
+<rect x="880" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="910" y="151" font-size="15" fill="#1f2937">O</text>
+<rect x="950" y="116" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="980" y="151" font-size="15" fill="#1f2937">P</text>
+<rect x="1020" y="116" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="1050" y="151" font-size="15" fill="#3730a3">Bspc</text>
+<rect x="40" y="186" width="60" height="60" rx="10" ry="10" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="70" y="221" font-size="15" fill="#6d28d9">L4</text>
+<rect x="110" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="140" y="221" font-size="15" fill="#1f2937">A</text>
+<rect x="180" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="210" y="221" font-size="15" fill="#1f2937">S</text>
+<rect x="250" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="280" y="221" font-size="15" fill="#1f2937">D</text>
+<rect x="320" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="350" y="221" font-size="15" fill="#1f2937">F</text>
+<rect x="390" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="420" y="221" font-size="15" fill="#1f2937">G</text>
+<rect x="670" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="700" y="221" font-size="15" fill="#1f2937">H</text>
+<rect x="740" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="770" y="221" font-size="15" fill="#1f2937">J</text>
+<rect x="810" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="840" y="221" font-size="15" fill="#1f2937">K</text>
+<rect x="880" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="910" y="221" font-size="15" fill="#1f2937">L</text>
+<rect x="950" y="186" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="980" y="221" font-size="15" fill="#1f2937">-</text>
+<rect x="1020" y="186" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="1050" y="220" font-size="12" fill="#3730a3">Enter</text>
+<rect x="40" y="256" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="70" y="290" font-size="12" fill="#3730a3">Shift</text>
+<rect x="110" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="140" y="291" font-size="15" fill="#1f2937">Z</text>
+<rect x="180" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="210" y="291" font-size="15" fill="#1f2937">X</text>
+<rect x="250" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="280" y="291" font-size="15" fill="#1f2937">C</text>
+<rect x="320" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="350" y="291" font-size="15" fill="#1f2937">V</text>
+<rect x="390" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="420" y="291" font-size="15" fill="#1f2937">B</text>
+<rect x="460" y="256" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="490" y="290" font-size="12" fill="#3730a3">Space</text>
+<rect x="600" y="256" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="630" y="290" font-size="12" fill="#3730a3">Space</text>
+<rect x="670" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="700" y="291" font-size="15" fill="#1f2937">N</text>
+<rect x="740" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="770" y="291" font-size="15" fill="#1f2937">M</text>
+<rect x="810" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="840" y="291" font-size="15" fill="#1f2937">,</text>
+<rect x="880" y="256" width="60" height="60" rx="10" ry="10" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="910" y="291" font-size="15" fill="#1f2937">.</text>
+<rect x="950" y="256" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="980" y="291" font-size="15" fill="#854d0e">↑</text>
+<rect x="1020" y="256" width="60" height="60" rx="10" ry="10" fill="#dbeafe" stroke="#93c5fd"/>
+<text x="1050" y="289" font-size="10" fill="#1e3a8a">? / Shift</text>
+<rect x="40" y="326" width="60" height="60" rx="10" ry="10" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="70" y="361" font-size="15" fill="#6d28d9">L2</text>
+<rect x="110" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="140" y="361" font-size="15" fill="#3730a3">Esc</text>
+<rect x="180" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="210" y="361" font-size="15" fill="#3730a3">Ctrl</text>
+<rect x="250" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="280" y="361" font-size="15" fill="#3730a3">Alt</text>
+<rect x="320" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="350" y="361" font-size="15" fill="#3730a3">Cmd</text>
+<rect x="390" y="326" width="60" height="60" rx="10" ry="10" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="420" y="361" font-size="15" fill="#6d28d9">L2</text>
+<rect x="460" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="490" y="360" font-size="12" fill="#3730a3">Space</text>
+<rect x="600" y="326" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="630" y="360" font-size="12" fill="#3730a3">Space</text>
+<rect x="810" y="326" width="60" height="60" rx="10" ry="10" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="840" y="361" font-size="15" fill="#6d28d9">L3</text>
+<rect x="880" y="326" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="910" y="361" font-size="15" fill="#854d0e">←</text>
+<rect x="950" y="326" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="980" y="361" font-size="15" fill="#854d0e">↓</text>
+<rect x="1020" y="326" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="1050" y="361" font-size="15" fill="#854d0e">→</text>
+<line x1="40" y1="400" x2="1080" y2="400" stroke="#e5e7eb" stroke-width="1"/>
+<text x="40" y="458" font-size="17" font-weight="700" text-anchor="start" fill="#111827">Layer 1 — Trackball / Mouse</text>
+<text x="40" y="476" font-size="12" font-weight="400" text-anchor="start" fill="#6b7280">トラックボール・マウスレイヤー</text>
+<rect x="40" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="484" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="770" y="519" font-size="15" fill="#9d174d">LClk</text>
+<rect x="810" y="484" width="60" height="60" rx="10" ry="10" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="840" y="519" font-size="15" fill="#6d28d9">L4</text>
+<rect x="880" y="484" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="910" y="519" font-size="15" fill="#9d174d">RClk</text>
+<rect x="950" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="484" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="40" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="554" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="700" y="588" font-size="12" fill="#9d174d">Cmd+[</text>
+<rect x="740" y="554" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="770" y="589" font-size="15" fill="#9d174d">MB1</text>
+<rect x="810" y="554" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="840" y="589" font-size="15" fill="#9d174d">MB3</text>
+<rect x="880" y="554" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="910" y="589" font-size="15" fill="#9d174d">MB2</text>
+<rect x="950" y="554" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="980" y="588" font-size="12" fill="#9d174d">Cmd+]</text>
+<rect x="1020" y="554" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="40" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="624" width="60" height="60" rx="10" ry="10" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="700" y="658" font-size="12" fill="#9d174d">Ctrl+↑</text>
+<rect x="740" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="624" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="40" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="694" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<line x1="40" y1="768" x2="1080" y2="768" stroke="#e5e7eb" stroke-width="1"/>
+<text x="40" y="826" font-size="17" font-weight="700" text-anchor="start" fill="#111827">Layer 2 — Symbols</text>
+<text x="40" y="844" font-size="12" font-weight="400" text-anchor="start" fill="#6b7280">記号レイヤー</text>
+<rect x="40" y="852" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="70" y="887" font-size="15" fill="#3730a3">Esc</text>
+<rect x="110" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="140" y="887" font-size="15" fill="#065f46">1</text>
+<rect x="180" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="210" y="887" font-size="15" fill="#065f46">2</text>
+<rect x="250" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="280" y="887" font-size="15" fill="#065f46">3</text>
+<rect x="320" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="350" y="887" font-size="15" fill="#065f46">4</text>
+<rect x="390" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="420" y="887" font-size="15" fill="#065f46">5</text>
+<rect x="670" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="700" y="887" font-size="15" fill="#065f46">6</text>
+<rect x="740" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="770" y="887" font-size="15" fill="#065f46">7</text>
+<rect x="810" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="840" y="887" font-size="15" fill="#065f46">8</text>
+<rect x="880" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="910" y="887" font-size="15" fill="#065f46">9</text>
+<rect x="950" y="852" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="980" y="887" font-size="15" fill="#065f46">0</text>
+<rect x="1020" y="852" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="1050" y="887" font-size="15" fill="#3730a3">Del</text>
+<rect x="40" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="70" y="957" font-size="15" fill="#065f46">`</text>
+<rect x="110" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="140" y="957" font-size="15" fill="#065f46">!</text>
+<rect x="180" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="210" y="957" font-size="15" fill="#065f46">@</text>
+<rect x="250" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="280" y="957" font-size="15" fill="#065f46">#</text>
+<rect x="320" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="350" y="957" font-size="15" fill="#065f46">$</text>
+<rect x="390" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="420" y="957" font-size="15" fill="#065f46">%</text>
+<rect x="670" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="700" y="957" font-size="15" fill="#065f46">^</text>
+<rect x="740" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="770" y="957" font-size="15" fill="#065f46">&amp;</text>
+<rect x="810" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="840" y="957" font-size="15" fill="#065f46">*</text>
+<rect x="880" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="910" y="957" font-size="15" fill="#065f46">(</text>
+<rect x="950" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="980" y="957" font-size="15" fill="#065f46">)</text>
+<rect x="1020" y="922" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="1050" y="957" font-size="15" fill="#065f46">+</text>
+<rect x="40" y="992" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="140" y="1027" font-size="15" fill="#065f46">-</text>
+<rect x="180" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="210" y="1027" font-size="15" fill="#065f46">_</text>
+<rect x="250" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="280" y="1027" font-size="15" fill="#065f46">=</text>
+<rect x="320" y="992" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="992" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="992" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="992" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="700" y="1027" font-size="15" fill="#065f46">~</text>
+<rect x="740" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="770" y="1027" font-size="15" fill="#065f46">{</text>
+<rect x="810" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="840" y="1027" font-size="15" fill="#065f46">}</text>
+<rect x="880" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="910" y="1027" font-size="15" fill="#065f46">[</text>
+<rect x="950" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="980" y="1027" font-size="15" fill="#065f46">]</text>
+<rect x="1020" y="992" width="60" height="60" rx="10" ry="10" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="1050" y="1027" font-size="15" fill="#065f46">/</text>
+<rect x="40" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="1062" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<line x1="40" y1="1136" x2="1080" y2="1136" stroke="#e5e7eb" stroke-width="1"/>
+<text x="40" y="1194" font-size="17" font-weight="700" text-anchor="start" fill="#111827">Layer 3 — Navigation &amp; Numpad</text>
+<text x="40" y="1212" font-size="12" font-weight="400" text-anchor="start" fill="#6b7280">ナビゲーション＆テンキー</text>
+<rect x="40" y="1220" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="140" y="1255" font-size="15" fill="#854d0e">Ins</text>
+<rect x="180" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="210" y="1255" font-size="15" fill="#854d0e">Home</text>
+<rect x="250" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="280" y="1255" font-size="15" fill="#854d0e">PgUp</text>
+<rect x="320" y="1220" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="1220" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="1220" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="770" y="1255" font-size="15" fill="#854d0e">7</text>
+<rect x="810" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="840" y="1255" font-size="15" fill="#854d0e">8</text>
+<rect x="880" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="910" y="1255" font-size="15" fill="#854d0e">9</text>
+<rect x="950" y="1220" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="980" y="1255" font-size="15" fill="#854d0e">*</text>
+<rect x="1020" y="1220" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="1050" y="1255" font-size="15" fill="#3730a3">Bspc</text>
+<rect x="40" y="1290" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="140" y="1325" font-size="15" fill="#854d0e">Del</text>
+<rect x="180" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="210" y="1325" font-size="15" fill="#854d0e">End</text>
+<rect x="250" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="280" y="1325" font-size="15" fill="#854d0e">PgDn</text>
+<rect x="320" y="1290" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="1290" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="1290" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="770" y="1325" font-size="15" fill="#854d0e">4</text>
+<rect x="810" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="840" y="1325" font-size="15" fill="#854d0e">5</text>
+<rect x="880" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="910" y="1325" font-size="15" fill="#854d0e">6</text>
+<rect x="950" y="1290" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="980" y="1325" font-size="15" fill="#854d0e">+</text>
+<rect x="1020" y="1290" width="60" height="60" rx="10" ry="10" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="1050" y="1324" font-size="12" fill="#3730a3">Enter</text>
+<rect x="40" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="1360" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="770" y="1395" font-size="15" fill="#854d0e">1</text>
+<rect x="810" y="1360" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="840" y="1395" font-size="15" fill="#854d0e">2</text>
+<rect x="880" y="1360" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="910" y="1395" font-size="15" fill="#854d0e">3</text>
+<rect x="950" y="1360" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="1360" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="1050" y="1395" font-size="15" fill="#854d0e">/</text>
+<rect x="40" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="180" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="390" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="1430" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="1430" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="910" y="1465" font-size="15" fill="#854d0e">0</text>
+<rect x="950" y="1430" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="980" y="1465" font-size="15" fill="#854d0e">.</text>
+<rect x="1020" y="1430" width="60" height="60" rx="10" ry="10" fill="#fef9c3" stroke="#fde68a"/>
+<text x="1050" y="1465" font-size="15" fill="#854d0e">=</text>
+<line x1="40" y1="1504" x2="1080" y2="1504" stroke="#e5e7eb" stroke-width="1"/>
+<text x="40" y="1562" font-size="17" font-weight="700" text-anchor="start" fill="#111827">Layer 4 — System / F-Keys / Bluetooth</text>
+<text x="40" y="1580" font-size="12" font-weight="400" text-anchor="start" fill="#6b7280">システム・Fキー・Bluetooth層</text>
+<rect x="40" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="70" y="1623" font-size="15" fill="#374151">F1</text>
+<rect x="110" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="140" y="1623" font-size="15" fill="#374151">F2</text>
+<rect x="180" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="210" y="1623" font-size="15" fill="#374151">F3</text>
+<rect x="250" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="280" y="1623" font-size="15" fill="#374151">F4</text>
+<rect x="320" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="350" y="1623" font-size="15" fill="#374151">F5</text>
+<rect x="390" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="420" y="1623" font-size="15" fill="#374151">F6</text>
+<rect x="670" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="700" y="1623" font-size="15" fill="#374151">F7</text>
+<rect x="740" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="770" y="1623" font-size="15" fill="#374151">F8</text>
+<rect x="810" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="840" y="1623" font-size="15" fill="#374151">F9</text>
+<rect x="880" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="910" y="1623" font-size="15" fill="#374151">F10</text>
+<rect x="950" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="980" y="1623" font-size="15" fill="#374151">F11</text>
+<rect x="1020" y="1588" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="1050" y="1623" font-size="15" fill="#374151">F12</text>
+<rect x="40" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="110" y="1658" width="60" height="60" rx="10" ry="10" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="140" y="1693" font-size="15" fill="#374151">Caps</text>
+<rect x="180" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="250" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="320" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="1658" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="40" y="1728" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="70" y="1763" font-size="15" fill="#9a3412">USB</text>
+<rect x="110" y="1728" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="140" y="1763" font-size="15" fill="#9a3412">BLE</text>
+<rect x="180" y="1728" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="210" y="1762" font-size="12" fill="#9a3412">BT Next</text>
+<rect x="250" y="1728" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="280" y="1762" font-size="12" fill="#9a3412">BT Clr</text>
+<rect x="320" y="1728" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="350" y="1761" font-size="10" fill="#9a3412">BT Clr All</text>
+<rect x="390" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="670" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="740" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="1728" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="40" y="1798" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="70" y="1833" font-size="15" fill="#9a3412">BT0</text>
+<rect x="110" y="1798" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="140" y="1833" font-size="15" fill="#9a3412">BT1</text>
+<rect x="180" y="1798" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="210" y="1833" font-size="15" fill="#9a3412">BT2</text>
+<rect x="250" y="1798" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="280" y="1833" font-size="15" fill="#9a3412">BT3</text>
+<rect x="320" y="1798" width="60" height="60" rx="10" ry="10" fill="#fed7aa" stroke="#fdba74"/>
+<text x="350" y="1833" font-size="15" fill="#9a3412">BT4</text>
+<rect x="390" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="460" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="600" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="810" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="880" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="950" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<rect x="1020" y="1798" width="60" height="60" rx="10" ry="10" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<line x1="40" y1="1872" x2="1080" y2="1872" stroke="#e5e7eb" stroke-width="1"/>
+<text x="40" y="1916" font-size="13" font-weight="700" text-anchor="start" fill="#111827">凡例</text>
+<rect x="40" y="1930" width="16" height="16" rx="4" ry="4" fill="#ffffff" stroke="#d0d5dd"/>
+<text x="62" y="1942" font-size="12" font-weight="400" text-anchor="start" fill="#374151">文字・数字</text>
+<rect x="248" y="1930" width="16" height="16" rx="4" ry="4" fill="#eef2ff" stroke="#c7d2fe"/>
+<text x="270" y="1942" font-size="12" font-weight="400" text-anchor="start" fill="#374151">修飾キー</text>
+<rect x="456" y="1930" width="16" height="16" rx="4" ry="4" fill="#dbeafe" stroke="#93c5fd"/>
+<text x="478" y="1942" font-size="12" font-weight="400" text-anchor="start" fill="#374151">Mod-Tap</text>
+<rect x="664" y="1930" width="16" height="16" rx="4" ry="4" fill="#ede9fe" stroke="#c4b5fd"/>
+<text x="686" y="1942" font-size="12" font-weight="400" text-anchor="start" fill="#374151">レイヤー切替 (mo)</text>
+<rect x="872" y="1930" width="16" height="16" rx="4" ry="4" fill="#d1fae5" stroke="#6ee7b7"/>
+<text x="894" y="1942" font-size="12" font-weight="400" text-anchor="start" fill="#374151">記号</text>
+<rect x="40" y="1956" width="16" height="16" rx="4" ry="4" fill="#fef9c3" stroke="#fde68a"/>
+<text x="62" y="1968" font-size="12" font-weight="400" text-anchor="start" fill="#374151">ナビ/テンキー</text>
+<rect x="248" y="1956" width="16" height="16" rx="4" ry="4" fill="#e5e7eb" stroke="#cbd5e1"/>
+<text x="270" y="1968" font-size="12" font-weight="400" text-anchor="start" fill="#374151">Fキー</text>
+<rect x="456" y="1956" width="16" height="16" rx="4" ry="4" fill="#fed7aa" stroke="#fdba74"/>
+<text x="478" y="1968" font-size="12" font-weight="400" text-anchor="start" fill="#374151">出力切替／Bluetooth</text>
+<rect x="664" y="1956" width="16" height="16" rx="4" ry="4" fill="#fce7f3" stroke="#f9a8d4"/>
+<text x="686" y="1968" font-size="12" font-weight="400" text-anchor="start" fill="#374151">マウス／トラックボール</text>
+<rect x="872" y="1956" width="16" height="16" rx="4" ry="4" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4,3"/>
+<text x="894" y="1968" font-size="12" font-weight="400" text-anchor="start" fill="#374151">透過 (&amp;trans)</text>
+<text x="40" y="2036" font-size="11" font-weight="400" text-anchor="start" fill="#9ca3af">※ このファイルはGitHub mainブランチに既に反映済みの本番版(&amp;studio_unlock追加後)とは別の、復元前の元デザインです。</text>
+</svg>
