@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1908" height="1202" viewBox="0 0 1908 1202">
+<rect x="0" y="0" width="1908" height="1202" fill="white"/>
+<text x="40" y="30" font-size="22" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#111">ZEN キーマップ (5レイヤー構成, config/keymap.keymap, main branch 2026-09-08時点)</text>
+<text x="40.0" y="66.0" font-size="16" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#222">Layer 0: Base</text>
+<rect x="40.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Tab</text>
+<rect x="100.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Q</text>
+<rect x="160.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">W</text>
+<rect x="220.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">E</text>
+<rect x="280.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">R</text>
+<rect x="340.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">T</text>
+<rect x="580.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Y</text>
+<rect x="640.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">U</text>
+<rect x="700.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">I</text>
+<rect x="760.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">O</text>
+<rect x="820.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">P</text>
+<rect x="880.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BSpc</text>
+<rect x="40.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fff3b0" stroke="#c9962f" stroke-width="2"/>
+<text x="67.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MO4</text>
+<circle cx="86.0" cy="148.0" r="9" fill="#c9962f"/><text x="86.0" y="152.0" font-size="11" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="white">A</text>
+<rect x="100.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">A</text>
+<rect x="160.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">S</text>
+<rect x="220.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">D</text>
+<rect x="280.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F</text>
+<rect x="340.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">G</text>
+<rect x="580.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">H</text>
+<rect x="640.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">J</text>
+<rect x="700.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">K</text>
+<rect x="760.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">L</text>
+<rect x="820.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">-</text>
+<rect x="880.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Enter</text>
+<rect x="40.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="229.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">LShift</text>
+<rect x="100.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Z</text>
+<rect x="160.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">X</text>
+<rect x="220.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">C</text>
+<rect x="280.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">V</text>
+<rect x="340.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">B</text>
+<rect x="400.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="427.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Space</text>
+<rect x="520.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="547.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Space</text>
+<rect x="580.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">N</text>
+<rect x="640.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">M</text>
+<rect x="700.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">,</text>
+<rect x="760.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">.</text>
+<rect x="820.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Up</text>
+<rect x="880.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="230.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">RS/?</text>
+<rect x="40.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MO2</text>
+<rect x="100.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Esc</text>
+<rect x="160.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">LCtrl</text>
+<rect x="220.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">LAlt</text>
+<rect x="280.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">LGUI</text>
+<rect x="340.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MO2</text>
+<rect x="400.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="427.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Space</text>
+<rect x="520.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="547.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Space</text>
+<rect x="700.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MO3</text>
+<rect x="760.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Left</text>
+<rect x="820.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Down</text>
+<rect x="880.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="290.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Right</text><text x="974.0" y="66.0" font-size="16" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#222">Layer 1: Pointer (auto via trackball)</text>
+<rect x="974.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1574.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1601.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">LClk</text>
+<rect x="1634.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#c9f0d8" stroke="#2f9e5c" stroke-width="2"/>
+<text x="1661.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MO4</text>
+<circle cx="1680.0" cy="88.0" r="9" fill="#2f9e5c"/><text x="1680.0" y="92.0" font-size="11" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="white">B</text>
+<rect x="1694.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="110.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">RClk</text>
+<rect x="1754.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1814.0" y="80.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="974.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1541.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">RG[</text>
+<rect x="1574.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1601.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MB1</text>
+<rect x="1634.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1661.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MB3</text>
+<rect x="1694.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">MB2</text>
+<rect x="1754.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1781.0" y="170.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">RG]</text>
+<rect x="1814.0" y="140.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="974.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1334.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1454.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1541.0" y="229.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Ctrl+Up</text>
+<rect x="1574.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1634.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1694.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1754.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1814.0" y="200.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="974.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1334.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1454.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1634.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1694.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1754.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1814.0" y="260.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/><text x="40.0" y="360.0" font-size="16" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#222">Layer 2: Symbols</text>
+<rect x="40.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Esc</text>
+<rect x="100.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">1</text>
+<rect x="160.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">2</text>
+<rect x="220.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">3</text>
+<rect x="280.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">4</text>
+<rect x="340.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">5</text>
+<rect x="580.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">6</text>
+<rect x="640.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">7</text>
+<rect x="700.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">8</text>
+<rect x="760.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">9</text>
+<rect x="820.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">0</text>
+<rect x="880.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Del</text>
+<rect x="40.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">`</text>
+<rect x="100.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">!</text>
+<rect x="160.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">@</text>
+<rect x="220.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">#</text>
+<rect x="280.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">$</text>
+<rect x="340.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">%</text>
+<rect x="580.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">^</text>
+<rect x="640.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">&amp;</text>
+<rect x="700.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">*</text>
+<rect x="760.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">(</text>
+<rect x="820.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">)</text>
+<rect x="880.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">+</text>
+<rect x="40.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="100.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">-</text>
+<rect x="160.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">_</text>
+<rect x="220.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">=</text>
+<rect x="280.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="340.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="400.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="520.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="580.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">~</text>
+<rect x="640.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">{</text>
+<rect x="700.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">}</text>
+<rect x="760.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">[</text>
+<rect x="820.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">]</text>
+<rect x="880.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">/</text>
+<rect x="40.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="100.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="160.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="220.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="280.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="340.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="400.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="520.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="700.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="760.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="820.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="880.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/><text x="974.0" y="360.0" font-size="16" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#222">Layer 3: Nav / Numpad</text>
+<rect x="974.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1061.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Ins</text>
+<rect x="1094.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1121.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Home</text>
+<rect x="1154.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1181.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">PgUp</text>
+<rect x="1214.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1574.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1601.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">7</text>
+<rect x="1634.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1661.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">8</text>
+<rect x="1694.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">9</text>
+<rect x="1754.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1781.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">*</text>
+<rect x="1814.0" y="374.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1841.0" y="404.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BSpc</text>
+<rect x="974.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1061.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Del</text>
+<rect x="1094.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1121.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">End</text>
+<rect x="1154.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1181.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">PgDn</text>
+<rect x="1214.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1574.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1601.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">4</text>
+<rect x="1634.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1661.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">5</text>
+<rect x="1694.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">6</text>
+<rect x="1754.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1781.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">+</text>
+<rect x="1814.0" y="434.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1841.0" y="464.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Enter</text>
+<rect x="974.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1334.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1454.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1514.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1574.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1601.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">1</text>
+<rect x="1634.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1661.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">2</text>
+<rect x="1694.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">3</text>
+<rect x="1754.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1814.0" y="494.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1841.0" y="524.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">/</text>
+<rect x="974.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1034.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1094.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1154.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1214.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1274.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1334.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1454.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1634.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="1694.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1721.0" y="584.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">0</text>
+<rect x="1754.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1781.0" y="584.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">.</text>
+<rect x="1814.0" y="554.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="1841.0" y="584.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">=</text><text x="40.0" y="654.0" font-size="16" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#222">Layer 4: System / Fn / BT</text>
+<rect x="40.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F1</text>
+<rect x="100.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F2</text>
+<rect x="160.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F3</text>
+<rect x="220.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F4</text>
+<rect x="280.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F5</text>
+<rect x="340.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="367.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F6</text>
+<rect x="580.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="607.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F7</text>
+<rect x="640.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="667.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F8</text>
+<rect x="700.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="727.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F9</text>
+<rect x="760.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="787.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F10</text>
+<rect x="820.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="847.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F11</text>
+<rect x="880.0" y="668.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="907.0" y="698.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">F12</text>
+<rect x="40.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#ffd1d1" stroke="#c94f4f" stroke-width="2"/>
+<text x="67.0" y="752.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">STUDIO</text>
+<text x="67.0" y="762.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">UNLOCK</text>
+<circle cx="86.0" cy="736.0" r="9" fill="#c94f4f"/><text x="86.0" y="740.0" font-size="11" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="white">C</text>
+<rect x="100.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="758.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">Caps</text>
+<rect x="160.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="220.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="280.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="340.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="580.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="640.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="700.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="760.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="820.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="880.0" y="728.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="40.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="818.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">USB</text>
+<rect x="100.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="818.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BLE</text>
+<rect x="160.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="817.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT nxt</text>
+<rect x="220.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="817.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT clr</text>
+<rect x="280.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="812.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT clr</text>
+<text x="307.0" y="822.7" font-size="8" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">ALL</text>
+<rect x="340.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="400.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="520.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="580.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="640.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="700.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="760.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="820.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="880.0" y="788.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="40.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="67.0" y="878.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT0</text>
+<rect x="100.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="127.0" y="878.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT1</text>
+<rect x="160.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="187.0" y="878.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT2</text>
+<rect x="220.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="247.0" y="878.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT3</text>
+<rect x="280.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<text x="307.0" y="878.3" font-size="10" font-family="Noto Sans CJK JP, sans-serif" text-anchor="middle" fill="#333">BT4</text>
+<rect x="340.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="400.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="520.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="700.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="760.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="820.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+<rect x="880.0" y="848.0" width="54.0" height="54.0" rx="6" fill="#fafafa" stroke="#bbb" stroke-width="1"/>
+
+    <text x="40" y="952.0" font-size="17" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#111">studio_unlock の押し方(DYA接続時のロック解除)</text>
+    <circle cx="50" cy="982.0" r="10" fill="#c9962f"/>
+    <text x="68" y="986.0" font-size="13" font-family="Noto Sans CJK JP, sans-serif" fill="#222">A: レイヤー0のこのキー(Aの左隣)は「MO4」= 押している間だけレイヤー4を開く。単体で押してもstudio_unlockは出ない。</text>
+    <circle cx="50" cy="1010.0" r="10" fill="#2f9e5c"/>
+    <text x="68" y="1014.0" font-size="13" font-family="Noto Sans CJK JP, sans-serif" fill="#222">B: レイヤー1(トラックボールを軽く動かすと自動で一時的に開く)にある別の「MO4」キー(Iの位置)。</text>
+    <circle cx="50" cy="1038.0" r="10" fill="#c94f4f"/>
+    <text x="68" y="1042.0" font-size="13" font-family="Noto Sans CJK JP, sans-serif" fill="#222">C: レイヤー4での同じ物理キー(A)の役割が studio_unlock になる。</text>
+    <text x="40" y="1072.0" font-size="14" font-weight="bold" font-family="Noto Sans CJK JP, sans-serif" fill="#111">手順: 1) トラックボールを軽く動かす(レイヤー1が0.5秒間有効) → 2) Bのキー(I位置)を押しっぱなし → 3) 押したままAのキー(Aの左隣)を押す = studio_unlock 送信</text>
+    <text x="40" y="1102.0" font-size="12" font-family="Noto Sans CJK JP, sans-serif" fill="#555">(Aのキー単体を押しても studio_unlock にはならない点に注意。同一物理キーがレイヤー0では「MO4」自身のため。)</text>
+    
+</svg>
